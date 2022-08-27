@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Shorts To Watch",
+    "description": "Redirects Youtube shorts to watch page instead.",
+    "version": "1",
+
+    "background": {
+        "scripts": ["background.js"]
+      },
+    "permissions": [
+        "tabs"
+     ]
+    }
