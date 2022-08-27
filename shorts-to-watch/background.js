@@ -1,10 +1,10 @@
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  // listener for tab opens
+  // regex to test the url with.
   const re = /https:\/\/www\.youtube\.com\/shorts\/\w+/;
 
   let match = re.test(tab.url);
   if (match) {
-    // when the page is loading (you can do info.status === 'complete' but you will see the page for a second or two)
+    // get the video id and append to regular watch
     let lastSlash = tab.url.lastIndexOf('/');
 
     let url = "https://www.youtube.com/watch?v=" + tab.url.substring(lastSlash + 1);
